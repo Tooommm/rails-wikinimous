@@ -13,6 +13,7 @@ p "crerating 10 articles"
 10.times do
   article = Article.new
   article.title = Faker::Movie.title
-  article.content =
-
+  article.content = Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4)
+  article.save
+  p "article #{article.title} created"
 end

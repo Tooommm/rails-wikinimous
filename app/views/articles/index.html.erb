@@ -1,0 +1,9 @@
+<h1>Article</h1>
+<h2>welcome to Tomwiki</h2>
+
+<% @articles.each do |article| %>
+<li> <%= link_to article.title, article_path(article) %> </li>
+<% end %>
+
+
+<%= link_to "create", new_article_path(@article) %>
